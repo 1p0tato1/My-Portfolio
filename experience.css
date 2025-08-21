@@ -1,0 +1,365 @@
+/* Experience Page Specific Styles */
+
+/* Timeline Styles */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: #b0e8a7;
+    border-radius: 2px;
+    opacity: 0.7;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+    width: 50%;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+    padding-right: 40px;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+    padding-left: 40px;
+    text-align: left;
+}
+
+.timeline-marker {
+    position: absolute;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background: #b0e8a7;
+    border-radius: 50%;
+    border: 3px solid #121212;
+    box-shadow: 0 0 20px rgba(176,232,167,0.3);
+    z-index: 10;
+}
+
+.timeline-item:nth-child(odd) .timeline-marker {
+    right: -10px;
+}
+
+.timeline-item:nth-child(even) .timeline-marker {
+    left: -10px;
+}
+
+.timeline-content {
+    background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #333;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.card img {
+    display : inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+    width: 110px;
+    margin-left: 120px;
+    padding-top: 15px;
+    padding-bottom: 25px;
+}
+
+.card .toggle-btn {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    background: transparent;
+    border-bottom: 1px solid #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.card .toggle-btn:hover {
+    border-bottom-color: #666;
+}
+
+.card .toggle-btn .arrow {
+    margin-right: 15px;
+    color: #888;
+    transition: transform 0.3s ease;
+}
+
+.card .toggle-btn.active .arrow {
+    transform: rotate(180deg);
+}
+
+.card .toggle-btn strong {
+    color: #888;
+    font-weight: 500;
+}
+
+.card .collapsible-content {
+    display: none;
+    padding: 15px 15px 15px 40px;
+    margin-top: 5px;
+    border-bottom: 1px solid #222;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(176,232,167,0.1);
+    border-color: #b0e8a7;
+}
+
+.timeline-item:nth-child(odd) .timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    right: -10px;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-left-color: #1a1a1a;
+}
+
+.timeline-item:nth-child(even) .timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: -10px;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-right-color: #1a1a1a;
+}
+
+/* Job Header Styles */
+.job-header {
+    margin-bottom: 20px;
+}
+
+.job-header h3 {
+    color: #FFFFFF;
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+
+.company {
+    display: block;
+    color: #b0e8a7;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.duration {
+    color: #ccc;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* Job Description Styles */
+.job-description p {
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.job-description ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.job-description li {
+    color: #ccc;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.job-description li::before {
+    content: '▶';
+    position: absolute;
+    left: 0;
+    color: #b0e8a7;
+    font-size: 0.8rem;
+}
+
+/* Technology Tags */
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.timeline-item:nth-child(odd) .tech-tags {
+    justify-content: flex-end;
+}
+
+.timeline-item:nth-child(even) .tech-tags {
+    justify-content: flex-start;
+}
+
+.tech-tag {
+    background: #b0e8a7;
+    color: #000;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(176,232,167,0.4);
+}
+
+/* Skills Section */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.skill-category {
+    background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #333;
+}
+
+.skill-category h3 {
+    color: #b0e8a7;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.skill-bar {
+    margin-bottom: 20px;
+}
+
+.skill-name {
+    display: block;
+    color: #fff;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.skill-progress {
+    height: 8px;
+    background: #333;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    width: 0;
+    transition: width 1.5s ease-in-out;
+}
+
+.skill-progress::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #b0e8a7;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(176,232,167,0.5);
+}
+
+.skill-progress::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* Responsive Timeline */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        left: 0 !important;
+        padding-left: 50px !important;
+        padding-right: 0 !important;
+        text-align: left !important;
+    }
+    
+    .timeline-marker {
+        left: 10px !important;
+        right: auto !important;
+    }
+    
+    .timeline-content::before {
+        left: -10px !important;
+        right: auto !important;
+        border-left-color: transparent !important;
+        border-right-color: #1a1a1a !important;
+    }
+    
+    .tech-tags {
+        justify-content: flex-start !important;
+    }
+    
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline-item {
+        padding-left: 30px !important;
+    }
+    
+    .timeline-marker {
+        left: 5px !important;
+        width: 15px;
+        height: 15px;
+    }
+    
+    .timeline::before {
+        left: 12px;
+    }
+}

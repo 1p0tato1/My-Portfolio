@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="projects.css">
+</head>
+<body>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+    </button>
+    <div class="sidebar-overlay"></div>
+    <div class="container">
+        <!-- Left Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="profile">
+                <img src="images/profile-picture.png" alt="Fayala Hakim" class="profile-img">
+                <h1>Fayala Hakim</h1>
+                <p class="job-title">Student</p>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html">Welcome</a></li>
+                <li><a href="experience.html">Education & Job Experience</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="certifications.html">Diplomas & Certifications</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="page-header">
+                <h1 class="page-title fade-in">My Projects</h1>
+                <p class="page-subtitle fade-in">Showcasing my work and achievements</p>
+            </div>
+
+            <div class="content-section fade-in">
+                <h2 class="section-title">Featured Projects</h2>
+                <p>Navigate through my portfolio using the arrow controls. Hover over cards for detailed information.</p>
+            </div>
+
+            <!-- Projects Carousel -->
+            <div class="carousel-container">
+                <button class="carousel-nav prev" onclick="previousProject()" aria-label="Previous project">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+
+                <div class="projects-carousel">
+                    <div class="project-wrapper active" data-index="0">
+                        <div class="project-card-3d">
+                            <div class="project-card-inner">
+                                <!-- Front of card -->
+                                <div class="project-card-front">
+                                    <div class="project-image">
+                                        <div class="project-placeholder">🔗 SEO Competition</div>
+                                    </div>
+                                    <div class="project-content-front">
+                                        <h3>Website Creation and SEO Enhancing</h3>
+                                        <p class="project-description-short">Built a functional website and enhancing its SEO to improve visibility in search results with my classmate.</p>
+                                        <div class="project-tech-front">
+                                            <span class="tech-badge">HTML</span>
+                                            <span class="tech-badge">CSS</span>
+                                            <span class="tech-badge">JavaScript</span>
+                                            <span class="tech-badge">SEO</span>
+                                        </div>
+                                        <div class="project-status completed">Completed</div>
+                                    </div>
+                                </div>
+                                <!-- Back of card -->
+                                <div class="project-card-back">
+                                    <div class="project-content-back">
+                                        <h3>Website Creation and SEO Enhancing</h3>
+                                        <div class="project-details-back">
+                                            <div class="detail-item">
+                                                <span class="detail-label">Role:</span>
+                                                <span class="detail-value">Developer & Designer</span>
+                                            </div>
+                                            <div class="detail-item">
+                                                <span class="detail-label">Timeline:</span>
+                                                <span class="detail-value">3 months (2025)</span>
+                                            </div>
+                                            <div class="detail-item">
+                                                <span class="detail-label">Teammate:</span>
+                                                <span class="detail-value"><a  class="detail-value" href="https://www.linkedin.com/in/louis-farge-8a4a84295/" target="_blank">Louis Farge</a></span>
+                                            </div>
+                                        </div>
+                                        <div class="project-achievements-back">
+                                            <div class="achievement">✨ Functional and user-friendly website</div>
+                                            <div class="achievement">⚡ Improved SEO for better search visibility</div>
+                                            <div class="achievement">📈 Increased ranking and online presence</div>
+                                            <div class="achievement">🤝 Collaborative project with Farge Louis</div>
+                                        </div>
+                                        <div class="project-buttons">
+                                            <a href="#" class="project-btn">Live Demo</a>
+                                            <a href="#" class="project-btn">GitHub</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-wrapper" data-index="1">
+                        <div class="project-card-3d">
+                            <div class="project-card-inner">
+                                <div class="project-card-front">
+                                    <div class="project-image">
+                                        <div class="project-placeholder">📱 Falling Sand</div>
+                                    </div>
+                                    <div class="project-content-front">
+                                        <h3>Falling Sand Game Recreation</h3>
+                                        <p class="project-description-short">In collaboration with a classmate, I developed a recreation of the classic Falling Sand Game using C++ and SFML</p>
+                                        <div class="project-tech-front">
+                                            <span class="tech-badge">C++</span>
+                                            <span class="tech-badge">SFML</span>
+                                        </div>
+                                        <div class="project-status completed">Completed</div>
+                                    </div>
+                                </div>
+                                <div class="project-card-back">
+                                    <div class="project-content-back">
+                                        <h3>Falling Sand Game Recreation</h3>
+                                        <div class="project-details-back">
+                                            <div class="detail-item">
+                                                <span class="detail-label">Role:</span>
+                                                <span class="detail-value">Developer</span>
+                                            </div>
+                                            <div class="detail-item">
+                                                <span class="detail-label">Timeline:</span>
+                                                <span class="detail-value">1 month (2025)</span>
+                                            </div>
+                                            <div class="detail-item">
+                                                <span class="detail-label">Teammate:</span>
+                                                <span class="detail-value"><a  class="detail-value" href="https://www.linkedin.com/in/noah-soler-9b0471267/" target="_blank">Noah Soler</a></span>
+                                            </div>
+                                        </div>
+                                        <div class="project-achievements-back">
+                                            <div class="achievement">🌍 Particle physics simulation</div>
+                                            <div class="achievement">🎮 Interactive materials</div>
+                                            <div class="achievement">⚡ Optimized SFML rendering</div>
+                                            <div class="achievement">🤝 Collaborative project with Soler Noah</div>
+                                        </div>
+                                        <div class="project-buttons">
+                                            <a href="#" class="project-btn">Live Demo</a>
+                                            <a href="#" class="project-btn">GitHub</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-wrapper" data-index="2">
+                        <div class="project-card-3d">
+                            <div class="project-card-inner">
+                                <div class="project-card-front">
+                                    <div class="project-image">
+                                        <div class="project-placeholder">🐦 Pokémon Game</div>
+                                    </div>
+                                    <div class="project-content-front">
+                                        <h3>Real-Time Analytics Dashboard</h3>
+                                        <p class="project-description-short">Recreated core mechanics of the classic Pokémon game, including battles, evolutions, and a Pokédex system.</p>
+                                    <div class="project-tech-front">
+                                        <span class="tech-badge">C++</span>
+                                    </div>
+                                        <div class="project-status suspended">SUSPENDED</div>
+                                    </div>
+                                </div>
+                                <div class="project-card-back">
+                                    <div class="project-content-back">
+                                        <h3>Pokémon Game Recreation</h3>
+                                        <div class="project-details-back">
+                                            <div class="detail-item">
+                                                <span class="detail-label">Role:</span>
+                                                <span class="detail-value">Developer</span>
+                                            </div>
+                                            <div class="detail-item">
+                                                <span class="detail-label">Year:</span>
+                                                <span class="detail-value">2025</span>
+                                            </div>
+                                            <div class="detail-item">
+                                                <span class="detail-label">Platform:</span>
+                                                <span class="detail-value">PC</span>
+                                            </div>
+                                        </div>
+                                        <div class="project-achievements-back">
+                                            <div class="achievement">📖 Functional Pokédex system</div>
+                                            <div class="achievement">⚡ Selection & insertion sorting</div>
+                                        </div>
+                                        <div class="project-buttons">
+                                            <a href="#" class="project-btn">Live Demo</a>
+                                            <a href="#" class="project-btn">GitHub</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-nav next" onclick="nextProject()" aria-label="Next project">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Carousel Indicators -->
+            <div class="carousel-indicators">
+                <span class="indicator active" onclick="goToProject(0)"></span>
+                <span class="indicator" onclick="goToProject(1)"></span>
+                <span class="indicator" onclick="goToProject(2)"></span>
+                <!-- Add one if project number increases -->
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Navigation functionality
+            const navToggle = document.querySelector('.nav-toggle');
+            const sidebar = document.querySelector('.sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            const mainContent = document.querySelector('.main-content');
+
+            function toggleNav() {
+                console.log('Toggle clicked'); // Debug line
+                sidebar.classList.toggle('active');
+                overlay.classList.toggle('active');
+                // Don't block scrolling on PC
+                if (window.innerWidth <= 768) {
+                    document.body.style.overflow = sidebar.classList.contains('active') ? 'hidden' : '';
+                }
+            }
+
+            // Event listeners for navigation toggle
+            navToggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                toggleNav();
+            });
+
+            // Event listener for overlay
+            overlay.addEventListener('click', toggleNav);
+
+            // Close navigation when clicking a link
+            const navLinks = document.querySelectorAll('.nav-menu a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (sidebar.classList.contains('active')) {
+                        toggleNav();
+                    }
+                });
+            });
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768 && sidebar.classList.contains('active')) {
+                toggleNav();
+            }
+        });
+
+        // Projects Carousel
+        let currentProject = 0;
+        const totalProjects = 3; // Update this to the total number of projects
+
+        function updateCarousel() {
+            const wrappers = document.querySelectorAll('.project-wrapper');
+            const indicators = document.querySelectorAll('.indicator');
+            
+            wrappers.forEach((wrapper, index) => {
+                wrapper.classList.remove('active', 'prev', 'next');
+                
+                if (index === currentProject) {
+                    wrapper.classList.add('active');
+                } else if (index === (currentProject - 1 + totalProjects) % totalProjects) {
+                    wrapper.classList.add('prev');
+                } else if (index === (currentProject + 1) % totalProjects) {
+                    wrapper.classList.add('next');
+                }
+            });
+            
+            indicators.forEach((indicator, index) => {
+                indicator.classList.toggle('active', index === currentProject);
+            });
+        }
+
+        function nextProject() {
+            currentProject = (currentProject + 1) % totalProjects;
+            updateCarousel();
+        }
+
+        function previousProject() {
+            currentProject = (currentProject - 1 + totalProjects) % totalProjects;
+            updateCarousel();
+        }
+
+        function goToProject(index) {
+            currentProject = index;
+            updateCarousel();
+        }
+
+        // Auto-play carousel (optional)
+        // setInterval(nextProject, 5000);
+
+        // Initialize carousel
+        updateCarousel();
+
+        // Learn More button functionality
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('learn-more-btn')) {
+                alert('This would open a detailed project page or modal with more information!');
+            }
+        });
+
+        // Touch support for mobile
+        let startX = 0;
+        let endX = 0;
+
+        document.querySelector('.projects-carousel').addEventListener('touchstart', function(e) {
+            startX = e.touches[0].clientX;
+        });
+
+        document.querySelector('.projects-carousel').addEventListener('touchend', function(e) {
+            endX = e.changedTouches[0].clientX;
+            const diff = startX - endX;
+            
+            if (Math.abs(diff) > 50) { // Minimum swipe distance
+                if (diff > 0) {
+                    nextProject();
+                } else {
+                    previousProject();
+                }
+            }
+        });
+    </script>
+</body>
+</html>

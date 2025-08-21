@@ -1,0 +1,214 @@
+
+/* Skills Container */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.skill-category {
+    background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+    border-radius: 12px;
+    padding: 30px;
+    border: 1px solid #333;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-category::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ffffff, transparent);
+    transition: left 0.5s;
+}
+
+.skill-category:hover::before {
+    left: 100%;
+}
+
+.skill-category:hover {
+    transform: translateY(-8px);
+    border-color: #ffffff;
+    box-shadow: 0 12px 35px rgba(176, 232, 167, 0.1);
+}
+
+.skill-category h3 {
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    text-align: center;
+    position: relative;
+    border-bottom: 2px solid #b0e8a7;
+    padding-bottom: 10px;
+}
+
+/* Skill Bars */
+.skill-bar {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.skill-bar:last-child {
+    margin-bottom: 0;
+}
+
+.skill-name {
+    display: block;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+.language-level {
+    color: #b0e8a7;
+    font-size: 0.85rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-left: 8px;
+}
+
+.skill-progress {
+    height: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #333;
+    width: 0;
+    transition: width 1.5s ease-in-out;
+}
+
+.skill-progress::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #b0e8a7;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(176,232,167,0.3);
+}
+
+/* Page Headers */
+.page-header {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.page-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #b0e8a7, #8ac582);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+}
+
+.page-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(135deg, #b0e8a7, #8ac582);
+    border-radius: 2px;
+}
+
+.page-subtitle {
+    color: #ccc;
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+@keyframes skillLoad {
+    from {
+        width: 0;
+    }
+    to {
+        width: var(--skill-width, 0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Staggered Animation Delays */
+.fade-in:nth-child(1) { animation-delay: 0.1s; }
+.fade-in:nth-child(2) { animation-delay: 0.2s; }
+.fade-in:nth-child(3) { animation-delay: 0.3s; }
+.fade-in:nth-child(4) { animation-delay: 0.4s; }
+
+/* Special Skills Page Enhancements */
+.skill-progress {
+    transition: all 0.3s ease;
+}
+
+.skill-progress:hover {
+    box-shadow: 0 2px 8px rgba(176, 232, 167, 0.3);
+}
+
+.skill-category:nth-child(odd) {
+    animation: fadeIn 0.6s ease-in-out;
+    animation-delay: 0.2s;
+}
+
+.skill-category:nth-child(even) {
+    animation: fadeIn 0.6s ease-in-out;
+    animation-delay: 0.4s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2.5rem;
+    }
+    
+    .skills-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .skill-category {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .skill-category {
+        padding: 15px;
+    }
+    
+    .page-title {
+        font-size: 2rem;
+    }
+}

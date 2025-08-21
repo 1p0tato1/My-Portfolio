@@ -1,0 +1,415 @@
+/* Certifications Page Specific Styles */
+
+/* Education Section */
+.education-grid {
+    display: grid;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.education-card {
+    display: flex;
+    background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+    border-radius: 12px;
+    padding: 30px;
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.education-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #b0e8a7, transparent);
+    transition: left 0.5s;
+}
+
+.education-card:hover::before {
+    left: 100%;
+}
+
+.education-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(176,232,167,0.15);
+    border-color: #b0e8a7;
+}
+
+.education-icon {
+    font-size: 3rem;
+    margin-right: 25px;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 5px;
+}
+
+.education-content {
+    flex: 1;
+}
+
+.education-content h3 {
+    color: #b0e8a7;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.institution {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.year {
+    color: #ccc;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.description {
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.downloads {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.download-tag {
+    background: rgba(176,232,167,0.1);
+    color: #b0e8a7;
+    border: 1px solid #b0e8a7;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-top: 15px;
+    position: relative;
+    text-align: center;
+}
+
+
+/* Certifications Section */
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.cert-card {
+    background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+    border-radius: 12px;
+    padding: 25px;
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.cert-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background: #b0e8a7;
+    opacity: 0.1;
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+
+.cert-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(176,232,167,0.15);
+    border-color: #b0e8a7;
+}
+
+.cert-badge {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cert-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    background: #b0e8a7;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #000;
+    font-size: 1.2rem;
+    box-shadow: 0 8px 25px rgba(176,232,167,0.3);
+    transition: transform 0.3s ease;
+}
+
+.cert-card:hover .cert-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.cert-content h3 {
+    color: #b0e8a7;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.cert-issuer {
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.cert-date,
+.cert-expires {
+    color: #ccc;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.cert-description {
+    color: #ccc;
+    line-height: 1.6;
+    margin: 15px 0;
+    text-align: justify;
+}
+
+.cert-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.skill-tag {
+    background: #b0e8a7;
+    color: #000;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(176,232,167,0.4);
+}
+
+/* Courses Section */
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.course-card {
+    background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.course-card::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #FFD700, #FFA500, #FFD700);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.course-card:hover::before {
+    transform: scaleX(1);
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.1);
+    border-color: #b0e8a7;
+}
+
+.course-card h3 {
+    color: #FFD700;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.course-provider {
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.course-date {
+    color: #ccc;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.course-topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.topic-tag {
+    background: rgba(176,232,167,0.1);
+    color: #b0e8a7;
+    border: 1px solid rgba(176,232,167,0.3);
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+/* Learning Stats */
+.learning-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 30px 20px;
+    background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+    border-radius: 12px;
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 215, 0, 0.05), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.stat-item:hover::before {
+    opacity: 1;
+}
+
+.stat-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(255, 215, 0, 0.1);
+    border-color: #FFD700;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #b0e8a7;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.stat-item:hover .stat-number {
+    transform: scale(1.1);
+}
+
+.stat-label {
+    color: #ccc;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .education-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .education-icon {
+        margin-right: 0;
+        margin-bottom: 20px;
+        justify-content: center;
+        padding-top: 0;
+    }
+    
+    .certifications-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .courses-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .learning-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .learning-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .downloads,
+    .cert-skills,
+    .course-topics {
+        justify-content: center;
+    }
+    
+    .education-card,
+    .cert-card,
+    .course-card {
+        padding: 20px;
+    }
+}
+
+/* Animation for certificate icons */
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 8px 25px rgba(255, 215, 0, 0.3);
+    }
+    50% {
+        box-shadow: 0 8px 35px rgba(255, 215, 0, 0.5);
+    }
+}
+
+.cert-icon {
+    animation: pulse 3s infinite;
+}
+
+/* Hover effects for tags */
+.download-tag:hover,
+.topic-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(176, 232, 167, 0.4);
+}

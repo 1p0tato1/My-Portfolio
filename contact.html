@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Your Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+    </button>
+    <div class="sidebar-overlay"></div>
+    <div class="container">
+        <!-- Left Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="profile">
+                <img src="images/profile-picture.png" alt="Fayala Hakim" class="profile-img">
+                <h1>Fayala Hakim</h1>
+                <p class="job-title">Student</p>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html">Welcome</a></li>
+                <li><a href="experience.html">Education & Job Experience</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="certifications.html">Diplomas & Certifications</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="page-header">
+                <h1 class="page-title fade-in">Get In Touch</h1>
+                <p class="page-subtitle fade-in">Feel free to reach out using the form below.</p>
+            </div>
+
+            <div class="contact-container">
+                <!-- Contact Info Section -->
+                <div class="contact-info fade-in">
+                    <h2 class="section-title">Contact Information</h2>
+                    <div class="contact-cards">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3>Email</h3>
+                            <p>hfayala53@gmail.com</p>
+                            <a href="mailto:hfayala53@gmail.com" class="contact-link">Send Email</a>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 10C21 17 12 23 12 23S3 17 3 10A9 9 0 0 1 12 1A9 9 0 0 1 21 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3>Location</h3>
+                            <p>Saint-Étienne, France</p>
+                            <span class="contact-link"></span> <!-- Can add "Available for remote work"-->
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <polyline points="12,6 12,12 16,14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3>Response Time</h3>
+                            <p>Within 24 hours</p>
+                            <span class="contact-link">Quick turnaround</span>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16 8A6 6 0 0 1 6 18C5 17 5 16 5 15C5 14 5 13 6 12A4 4 0 0 0 8 16A4.5 4.5 0 0 0 12 12.5A4.5 4.5 0 0 0 16 8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M15 7A1 1 0 0 0 14 8A1 1 0 0 0 15 9A1 1 0 0 0 16 8A1 1 0 0 0 15 7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3>Availability</h3>
+                            <p>Open for opportunities</p>
+                            <span class="contact-link">Let's collaborate</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form Section -->
+                <div class="contact-form-section fade-in">
+                    <h2 class="section-title">Send Me a Message</h2>
+                    <p class="form-description">Have a project in mind or want to discuss opportunities? I'd love to hear from you!</p>
+                    
+                    <form class="contact-form" action="https://formspree.io/f/xpzgkjny" method="POST" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                            <span class="form-focus-line"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="form-focus-line"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="company">Company/Organization</label>
+                            <input type="text" id="company" name="company">
+                            <span class="form-focus-line"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="Project Inquiry">Project Inquiry</option>
+                                <option value="Job Opportunity">Job Opportunity</option>
+                                <option value="Collaboration">Collaboration</option>
+                                <option value="Consultation">Consultation</option>
+                                <option value="General Question">General Question</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <span class="form-focus-line"></span>
+                        </div>
+
+                        <div class="form-group form-group-full">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Tell me about your project, ideas, or how I can help you..."></textarea>
+                            <span class="form-focus-line"></span>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary" id="submitBtn">
+                                <span class="btn-text">Send Message</span>
+                                <span class="btn-loading">Sending...</span>
+                                <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <line x1="22" y1="2" x2="11" y2="13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <polygon points="22,2 15,22 11,13 2,9 22,2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                            <button type="reset" class="btn btn-secondary">Clear Form</button>
+                        </div>
+
+                        <!-- Hidden field to specify recipient -->
+                        <input type="hidden" name="_to" value="hfayala53@gmail.com">
+                        <input type="hidden" name="_subject" value="New Contact Form Submission">
+                        <input type="hidden" name="_next" value="thank-you.html">
+                    </form>
+
+                    <!-- Success Message -->
+                    <div class="success-message" id="successMessage">
+                        <div class="success-content">
+                            <div class="success-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22 11.08V12A10 10 0 1 1 5.93 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <polyline points="22,4 12,14.01 9,11.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3>Message Sent Successfully!</h3>
+                            <p>Thank you for reaching out. I'll get back to you within 24 hours.</p>
+                        </div>
+                    </div>
+
+                    <!-- Error Message -->
+                    <div class="error-message" id="errorMessage">
+                        <div class="error-content">
+                            <div class="error-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                                    <line x1="15" y1="9" x2="9" y2="15" stroke="currentColor" stroke-width="2"/>
+                                    <line x1="9" y1="9" x2="15" y2="15" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <h3>Oops! Something went wrong</h3>
+                            <p>Please try again or send me an email directly at <a href="mailto:hfayala53@gmail.com">hfayala53@gmail.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Links Section -->
+            <div class="content-section fade-in">
+                <h2 class="section-title">Connect With Me</h2>
+                <div class="social-links">
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/in/hakim-fayala/" class="social-link" target="_blank" rel="noopener noreferrer">
+                        <div class="social-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 8A6 6 0 0 1 6 18C5 17 5 16 5 15V13A6 6 0 0 1 16 8Z" stroke="currentColor" stroke-width="2"/>
+                                <path d="M15 7A1 1 0 0 0 14 8A1 1 0 0 0 15 9A1 1 0 0 0 16 8A1 1 0 0 0 15 7Z" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <span>LinkedIn</span>
+                    </a>
+                    <!-- Github -->
+                    <a href="https://github.com/1p0tato1?tab=projects" class="social-link" target="_blank" rel="noopener noreferrer">
+                        <div class="social-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 19C4 20.5 4 16.5 2 16L9 19Z" stroke="currentColor" stroke-width="2"/>
+                                <path d="M15 2V6C15 7 15 8 16 8H20V16C20 16.5 19.5 17 19 17H15V12C15 11 14 10 13 10S11 11 11 12V17H7V7C7 6.5 7.5 6 8 6H15V2Z" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Navigation functionality
+            const navToggle = document.querySelector('.nav-toggle');
+            const sidebar = document.querySelector('.sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            const mainContent = document.querySelector('.main-content');
+
+            function toggleNav() {
+                console.log('Toggle clicked'); // Debug line
+                sidebar.classList.toggle('active');
+                overlay.classList.toggle('active');
+                // Don't block scrolling on PC
+                if (window.innerWidth <= 768) {
+                    document.body.style.overflow = sidebar.classList.contains('active') ? 'hidden' : '';
+                }
+            }
+
+            // Event listeners for navigation toggle
+            navToggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                toggleNav();
+            });
+
+            // Event listener for overlay
+            overlay.addEventListener('click', toggleNav);
+
+            // Close navigation when clicking a link
+            const navLinks = document.querySelectorAll('.nav-menu a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (sidebar.classList.contains('active')) {
+                        toggleNav();
+                    }
+                });
+            });
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768 && sidebar.classList.contains('active')) {
+                toggleNav();
+            }
+        });
+
+        // Form submission handling
+        const form = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const successMessage = document.getElementById('successMessage');
+        const errorMessage = document.getElementById('errorMessage');
+
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Show loading state
+            submitBtn.classList.add('loading');
+            submitBtn.disabled = true;
+            
+            // Hide previous messages
+            successMessage.classList.remove('show');
+            errorMessage.classList.remove('show');
+
+            try {
+                const formData = new FormData(form);
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    // Show success message
+                    successMessage.classList.add('show');
+                    form.reset();
+                    
+                    // Scroll to success message
+                    successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                // Show error message
+                errorMessage.classList.add('show');
+                errorMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            } finally {
+                // Remove loading state
+                submitBtn.classList.remove('loading');
+                submitBtn.disabled = false;
+            }
+        });
+
+        // Form validation and UX enhancements
+        const inputs = document.querySelectorAll('.form-group input, .form-group select, .form-group textarea');
+        
+        inputs.forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentNode.classList.add('focused');
+            });
+            
+            input.addEventListener('blur', function() {
+                if (!this.value) {
+                    this.parentNode.classList.remove('focused');
+                } else {
+                    this.parentNode.classList.add('has-value');
+                }
+            });
+            
+            // Check if input has value on page load
+            if (input.value) {
+                input.parentNode.classList.add('has-value');
+            }
+        });
+
+        // Character counter for textarea
+        const textarea = document.getElementById('message');
+        const maxLength = 1000;
+        
+        // Create character counter
+        const counter = document.createElement('div');
+        counter.className = 'char-counter';
+        counter.textContent = `0/${maxLength}`;
+        textarea.parentNode.appendChild(counter);
+        
+        textarea.addEventListener('input', function() {
+            const length = this.value.length;
+            counter.textContent = `${length}/${maxLength}`;
+            
+            if (length > maxLength * 0.9) {
+                counter.classList.add('warning');
+            } else {
+                counter.classList.remove('warning');
+            }
+        });
+    </script>
+</body>
+</html>
