@@ -48,8 +48,8 @@
                                 <img src="images/profile-picture.png" alt="Fayala Hakim" class="face-avatar" />
                                 <div>
                                     <h2 class="face-name">Fayala Hakim</h2>
-                                    <p class="face-role">Computer Science Student</p>
-                                    <p class="face-location"><i class="fas fa-map-marker-alt"></i> France</p>
+                                    <p class="face-role">Engineering Student</p>
+                                    <p class="face-location"><i class="fas fa-map-marker-alt"></i>France</p>
                                 </div>
                             </header>
                             <section class="face-section">
@@ -64,21 +64,12 @@
                                     <span class="skill-chip">JavaScript</span>
                                     <span class="skill-chip">Python</span>
                                     <span class="skill-chip">Git</span>
-                                    <span class="skill-chip">Problem Solving</span>
-                                    <span class="skill-chip">Fast Learning</span>
+                                    <span class="skill-chip">C++</span>
                                 </div>
                             </section>
-                            <section class="face-section">
-                                <h3><i class="fas fa-diagram-project"></i> Highlights</h3>
-                                <ul class="highlights">
-                                    <li>5+ small personal projects</li>
-                                    <li>2+ years continuous learning</li>
-                                    <li>Strong motivation & adaptability</li>
-                                </ul>
-                            </section>
+                            
                             <div class="face-actions">
-                                <a href="experience.html" class="action-btn primary"><i class="fas fa-user-graduate"></i> Experience</a>
-                                <a href="projects.html" class="action-btn secondary"><i class="fas fa-folder-open"></i> Projects</a>
+                                <a href="experience.html" class="action-btn primary" aria-label="Start exploring my experience">✨ Start Exploring! ✨</a>
                             </div>
                         </div>
                         <span class="glare-layer"></span>
@@ -89,18 +80,18 @@
                             <h3 class="back-title"><i class="fas fa-address-card"></i> Contact Info</h3>
                             <div class="contact-list">
                                 <div class="contact-row"><i class="fas fa-envelope"></i><span>hfayala53@gmail.com</span></div>
-                                <div class="contact-row"><i class="fas fa-phone"></i><span>+33 6 XX XX XX XX</span></div>
-                                <div class="contact-row"><i class="fas fa-graduation-cap"></i><span>CS Student</span></div>
+                                <div class="contact-row"><i class="fas fa-phone"></i><span>+33 7 58 27 13 23</span></div>
+                                <div class="contact-row"><i class="fas fa-graduation-cap"></i><span>Engineering Student</span></div>
                                 <div class="contact-row"><i class="fas fa-globe"></i><span>Open to opportunities</span></div>
                             </div>
                             <div class="stats-grid">
                                 <div class="stat-box"><h4>2+</h4><p>Years Learning</p></div>
-                                <div class="stat-box"><h4>5+</h4><p>Projects</p></div>
+                                <div class="stat-box"><h4>2+</h4><p>Projects</p></div>
                                 <div class="stat-box"><h4>∞</h4><p>Growth</p></div>
                             </div>
                             <div class="social-grid">
-                                <a href="#" class="social-btn" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#" class="social-btn" title="GitHub" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                                <a href="https://www.linkedin.com/in/hakim-fayala/" class="social-btn" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://github.com/1p0tato1?tab=projects" class="social-btn" title="GitHub" aria-label="GitHub"><i class="fab fa-github"></i></a>
                                 <a href="contact.html" class="social-btn" title="Contact" aria-label="Email"><i class="fas fa-envelope"></i></a>
                             </div>
                         </div>
@@ -184,6 +175,22 @@
         unflipBtn.addEventListener('click', ()=> { rotator.classList.remove('flipped'); resetTilt(); });
         // Accessibility: flip with Enter/Space
         [flipBtn, unflipBtn].forEach(btn=> btn.addEventListener('keydown', e=> { if(e.key==='Enter'|| e.key===' ') { e.preventDefault(); btn.click(); }}));
+
+        // Dynamic height adaptation to content (avoid empty space)
+        function adjustCardHeight(){
+            const faces = rotator.querySelectorAll('.profile-3d-face');
+            let max = 0;
+            faces.forEach(f => { const h = f.scrollHeight; if(h>max) max = h; });
+            wrapper.style.height = max + 'px';
+        }
+        const ro = new ResizeObserver(adjustCardHeight);
+        ro.observe(document.querySelector('.profile-3d-face.front'));
+        ro.observe(document.querySelector('.profile-3d-face.back'));
+        window.addEventListener('load', adjustCardHeight);
+        window.addEventListener('resize', adjustCardHeight);
+        flipBtn.addEventListener('click', adjustCardHeight);
+        unflipBtn.addEventListener('click', adjustCardHeight);
+        adjustCardHeight();
     </script>
 </body>
 </html>
