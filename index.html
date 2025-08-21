@@ -6,6 +6,7 @@
     <title>Welcome</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="card-3d.css">
 </head>
 <body>
     <button class="nav-toggle" aria-label="Toggle navigation">
@@ -38,58 +39,72 @@
                 <p class="page-subtitle fade-in">Discover my journey, skills, and passion</p>
             </div>
 
-            <div class="content-section fade-in">
-                <h2 class="section-title">Hello, I'm Hakim</h2>
-                <p>Welcome to my professional portfolio! I'm passionate about creating innovative solutions and bringing ideas to life. This space showcases my journey, experiences, and the projects I'm most proud of.</p>
-                
-                <div class="cards-grid">
-                    <div class="card">
-                        <h3>🎯 My Mission</h3>
-                        <p>To create impactful solutions that make a difference. I believe in combining creativity with technical expertise to deliver exceptional results.</p>
+            <div class="profile-3d-wrapper" id="profile3d">
+                <div class="profile-3d-rotator" id="profile3dInner">
+                    <div class="profile-3d-face front" aria-label="Profile summary">
+                        <button class="face-btn flip" id="flipCard"><i class="fas fa-rotate"></i> Contact</button>
+                        <div class="front-scroll">
+                            <header class="face-header">
+                                <img src="images/profile-picture.png" alt="Fayala Hakim" class="face-avatar" />
+                                <div>
+                                    <h2 class="face-name">Fayala Hakim</h2>
+                                    <p class="face-role">Computer Science Student</p>
+                                    <p class="face-location"><i class="fas fa-map-marker-alt"></i> France</p>
+                                </div>
+                            </header>
+                            <section class="face-section">
+                                <h3><i class="fas fa-user"></i> About Me</h3>
+                                <p class="about-text">Curious student & self‑driven developer focused on building clean, accessible and efficient web experiences while continuously learning core CS concepts.</p>
+                            </section>
+                            <section class="face-section">
+                                <h3><i class="fas fa-code"></i> Key Skills</h3>
+                                <div class="skill-chip-grid">
+                                    <span class="skill-chip">HTML</span>
+                                    <span class="skill-chip">CSS</span>
+                                    <span class="skill-chip">JavaScript</span>
+                                    <span class="skill-chip">Python</span>
+                                    <span class="skill-chip">Git</span>
+                                    <span class="skill-chip">Problem Solving</span>
+                                    <span class="skill-chip">Fast Learning</span>
+                                </div>
+                            </section>
+                            <section class="face-section">
+                                <h3><i class="fas fa-diagram-project"></i> Highlights</h3>
+                                <ul class="highlights">
+                                    <li>5+ small personal projects</li>
+                                    <li>2+ years continuous learning</li>
+                                    <li>Strong motivation & adaptability</li>
+                                </ul>
+                            </section>
+                            <div class="face-actions">
+                                <a href="experience.html" class="action-btn primary"><i class="fas fa-user-graduate"></i> Experience</a>
+                                <a href="projects.html" class="action-btn secondary"><i class="fas fa-folder-open"></i> Projects</a>
+                            </div>
+                        </div>
+                        <span class="glare-layer"></span>
                     </div>
-                    
-                    <div class="card">
-                        <h3>💡 Innovation</h3>
-                        <p>Always exploring new technologies and methodologies to stay at the forefront of my field and deliver cutting-edge solutions.</p>
-                    </div>
-                    
-                    <div class="card">
-                        <h3>🤝 Collaboration</h3>
-                        <p>I thrive in collaborative environments where diverse perspectives come together to create something extraordinary.</p>
-                    </div>
-                </div>
-                
-                <div style="text-align: center; margin-top: 40px;">
-                    <a href="about.html" class="btn">Learn More About Me</a>
-                    <a href="projects.html" class="btn">View My Work</a>
-                </div>
-            </div>
-
-            <div class="content-section fade-in">
-                <h2 class="section-title">Quick Overview</h2>
-                <div class="cards-grid">
-                    <div class="card">
-                        <h3>Experience</h3>
-                        <p>...</p>
-                        <a href="experience.html" class="btn" style="margin-top: 15px;">View Experience</a>
-                    </div>
-                    
-                    <div class="card">
-                        <h3>Skills & Certifications</h3>
-                        <p>...</p>
-                        <a href="certifications.html" class="btn" style="margin-top: 15px;">View Certifications</a>
-                    </div>
-                    
-                    <div class="card">
-                        <h3>Projects</h3>
-                        <p>...</p>
-                        <a href="projects.html" class="btn" style="margin-top: 15px;">View Projects</a>
-                    </div>
-
-                    <div class="card">
-                        <h3>Contact me</h3>
-                        <p>...</p>
-                        <a href="projects.html" class="btn" style="margin-top: 15px;">View Projects</a>
+                    <div class="profile-3d-face back" aria-label="Contact information">
+                        <button class="face-btn unflip" id="unflipCard"><i class="fas fa-arrow-left"></i> Back</button>
+                        <div class="back-scroll">
+                            <h3 class="back-title"><i class="fas fa-address-card"></i> Contact Info</h3>
+                            <div class="contact-list">
+                                <div class="contact-row"><i class="fas fa-envelope"></i><span>hfayala53@gmail.com</span></div>
+                                <div class="contact-row"><i class="fas fa-phone"></i><span>+33 6 XX XX XX XX</span></div>
+                                <div class="contact-row"><i class="fas fa-graduation-cap"></i><span>CS Student</span></div>
+                                <div class="contact-row"><i class="fas fa-globe"></i><span>Open to opportunities</span></div>
+                            </div>
+                            <div class="stats-grid">
+                                <div class="stat-box"><h4>2+</h4><p>Years Learning</p></div>
+                                <div class="stat-box"><h4>5+</h4><p>Projects</p></div>
+                                <div class="stat-box"><h4>∞</h4><p>Growth</p></div>
+                            </div>
+                            <div class="social-grid">
+                                <a href="#" class="social-btn" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-btn" title="GitHub" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                                <a href="contact.html" class="social-btn" title="Contact" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                        <span class="glare-layer"></span>
                     </div>
                 </div>
             </div>
@@ -136,6 +151,39 @@
                 toggleNav();
             }
         });
+
+
+        // 3D Profile Card (front/back tilt + flip)
+        const wrapper = document.getElementById('profile3d');
+        const rotator = document.getElementById('profile3dInner');
+        const flipBtn = document.getElementById('flipCard');
+        const unflipBtn = document.getElementById('unflipCard');
+        const glareLayers = wrapper.querySelectorAll('.glare-layer');
+
+        const MAX_TILT = 14; // degrees
+
+        function handleMove(e){
+            const rect = wrapper.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const px = (x/rect.width) - .5; // -0.5 .. 0.5
+            const py = (y/rect.height) - .5;
+            const rx = (-py * MAX_TILT).toFixed(2);
+            const ry = (px * MAX_TILT).toFixed(2);
+            const baseY = rotator.classList.contains('flipped') ? 180 : 0;
+            rotator.style.transform = `rotateY(${baseY + parseFloat(ry)}deg) rotateX(${rx}deg)`;
+            glareLayers.forEach(gl => gl.style.background = `radial-gradient(circle at ${50+px*50}% ${50+py*50}%, rgba(255,255,255,0.25), transparent 60%)`);
+        }
+        function resetTilt(){
+            rotator.style.transform = rotator.classList.contains('flipped') ? 'rotateY(180deg)' : 'rotateY(0deg)';
+            glareLayers.forEach(gl => gl.style.background = 'radial-gradient(circle at 50% 50%, rgba(255,255,255,0.25), transparent 60%)');
+        }
+        wrapper.addEventListener('mousemove', handleMove);
+        wrapper.addEventListener('mouseleave', resetTilt);
+        flipBtn.addEventListener('click', ()=> { rotator.classList.add('flipped'); resetTilt(); });
+        unflipBtn.addEventListener('click', ()=> { rotator.classList.remove('flipped'); resetTilt(); });
+        // Accessibility: flip with Enter/Space
+        [flipBtn, unflipBtn].forEach(btn=> btn.addEventListener('keydown', e=> { if(e.key==='Enter'|| e.key===' ') { e.preventDefault(); btn.click(); }}));
     </script>
 </body>
 </html>
