@@ -8,12 +8,16 @@
 }
 
 .skill-category {
-    background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
-    border-radius: 12px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
     padding: 30px;
-    border: 1px solid #333;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-    transition: all 0.3s ease;
+    border: 1px solid rgba(176, 232, 167, 0.15);
+    box-shadow: 
+        0 10px 40px rgba(0, 0, 0, 0.4),
+        0 0 0 1px rgba(255, 255, 255, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     position: relative;
     overflow: hidden;
 }
@@ -22,21 +26,25 @@
     content: '';
     position: absolute;
     top: 0;
-    left: -100%;
-    width: 100%;
+    left: 0;
+    right: 0;
     height: 2px;
-    background: linear-gradient(90deg, transparent, #ffffff, transparent);
-    transition: left 0.5s;
+    background: linear-gradient(90deg, #b0e8a7, #7dd3fc, #b0e8a7);
+    opacity: 0;
+    transition: opacity 0.4s ease;
 }
 
 .skill-category:hover::before {
-    left: 100%;
+    opacity: 1;
 }
 
 .skill-category:hover {
-    transform: translateY(-8px);
-    border-color: #ffffff;
-    box-shadow: 0 12px 35px rgba(176, 232, 167, 0.1);
+    transform: translateY(-10px);
+    border-color: rgba(176, 232, 167, 0.3);
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(176, 232, 167, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }
 
 .skill-category h3 {
@@ -76,14 +84,15 @@
 }
 
 .skill-progress {
-    height: 12px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 6px;
+    height: 14px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
     position: relative;
     overflow: hidden;
-    border: 1px solid #333;
+    border: 1px solid rgba(176, 232, 167, 0.15);
     width: 0;
-    transition: width 1.5s ease-in-out;
+    transition: width 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .skill-progress::before {
@@ -93,9 +102,11 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background: #b0e8a7;
-    border-radius: 6px;
-    box-shadow: 0 0 10px rgba(176,232,167,0.3);
+    background: linear-gradient(135deg, #b0e8a7, #7dd3fc);
+    border-radius: 10px;
+    box-shadow: 
+        0 0 15px rgba(176, 232, 167, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
 /* Page Headers */
