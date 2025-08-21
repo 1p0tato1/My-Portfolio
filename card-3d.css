@@ -194,6 +194,24 @@
 .contact-row { display:flex; align-items:center; gap:.65rem; font-size:.78rem; letter-spacing:.5px; padding:.65rem .75rem; background:rgba(176,232,167,0.07); border:1px solid rgba(176,232,167,.25); border-left:3px solid #b0e8a7; border-radius:9px; color:#e0e0e0; }
 .contact-row i { color:#b0e8a7; }
 
+/* Skill icon grid (grayscale -> colored on hover with tooltips) */
+.skill-chip-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(65px,1fr)); gap:.75rem; }
+.skill-icon { position:relative; aspect-ratio:1/1; border:1px solid rgba(255,255,255,0.1); border-radius:12px; display:flex; align-items:center; justify-content:center; background:rgba(255,255,255,0.03); cursor:pointer; transition: border-color .35s, background .35s, transform .35s, box-shadow .35s; }
+.skill-icon i, .skill-icon .cpp-logo { font-size:2.2rem; filter:grayscale(1) brightness(0.8); transition: transform .35s, filter .35s; }
+.skill-icon .cpp-logo { width:2.2rem; height:auto; max-height:2.2rem; object-fit:contain; }
+.skill-icon .skill-label { position:absolute; bottom:calc(100% + 8px); left:50%; transform:translateX(-50%); background:#1a1a1a; color:#fff; font-size:.75rem; font-weight:500; padding:.5rem .75rem; border-radius:6px; white-space:nowrap; opacity:0; visibility:hidden; transition: opacity .3s, visibility .3s, transform .3s; pointer-events:none; z-index:1000; box-shadow:0 4px 12px rgba(0,0,0,0.3); }
+.skill-icon .skill-label::after { content:''; position:absolute; top:100%; left:50%; transform:translateX(-50%); border:5px solid transparent; border-top-color:#1a1a1a; }
+.skill-icon:hover { background:rgba(255,255,255,0.08); border-color:rgba(255,255,255,0.2); transform:translateY(-3px) scale(1.05); box-shadow:0 8px 20px rgba(0,0,0,0.2); }
+.skill-icon:hover i, .skill-icon:hover .cpp-logo { transform:scale(1.1); filter:none; }
+.skill-icon:hover .skill-label { opacity:1; visibility:visible; transform:translateX(-50%) translateY(-2px); }
+
+/* Language-specific colors (applied on hover) */
+.skill-html:hover i { color:#E44D26; }
+.skill-css:hover i { color:#1572B6; }
+.skill-js:hover i { color:#F7DF1E; }
+.skill-python:hover i { color:#3776AB; }
+.skill-git:hover i { color:#F05032; }
+
 .stats-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:.5rem; margin-bottom:1rem; }
 .stat-box { position:relative; padding:.6rem .5rem .55rem; text-align:center; background:rgba(176,232,167,0.06); border:1px solid rgba(176,232,167,.3); border-radius:10px; overflow:hidden; }
 .stat-box:after { content:''; position:absolute; inset:0; background:radial-gradient(circle at 30% 25%, rgba(176,232,167,.2), transparent 65%); opacity:.7; pointer-events:none; }
