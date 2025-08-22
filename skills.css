@@ -1,3 +1,32 @@
+/* Responsive Design */
+@media (max-width: 900px) {
+    .skills-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    .skill-category {
+        padding: 18px;
+    }
+    .skill-category h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .skills-container {
+        gap: 12px;
+        padding: 0 2px;
+    }
+    .skill-category {
+        padding: 12px 8px;
+        border-radius: 14px;
+        box-shadow: 0 4px 18px rgba(0,0,0,0.18);
+    }
+    .skill-category h3 {
+        font-size: 1.08rem;
+        margin-bottom: 12px;
+    }
+}
 
 /* Skills Container */
 .skills-container {

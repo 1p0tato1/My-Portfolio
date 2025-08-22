@@ -132,7 +132,7 @@
 
 .glare-layer { position:absolute; inset:0; pointer-events:none; mix-blend-mode:screen; opacity:.35; background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.25), transparent 60%); transition: background .25s; }
 
-.front-scroll, .back-scroll { flex:1; padding:1.4rem 1.3rem 1.2rem; overflow: hidden; }
+.front-scroll, .back-scroll { flex:1; padding:1.4rem 1.3rem 1.2rem; overflow: visible; }
 /* Remove custom scrollbars since scrolling removed */
 .front-scroll::-webkit-scrollbar, .back-scroll::-webkit-scrollbar { display:none; }
 

@@ -1,3 +1,31 @@
+/* Responsive Design */
+@media (max-width: 900px) {
+    .timeline {
+        max-width: 100%;
+        padding: 10px 0;
+    }
+    .timeline-item {
+        width: 100%;
+        left: 0 !important;
+        padding: 0 0 30px 0 !important;
+        text-align: left !important;
+    }
+    .timeline-marker {
+        left: -10px !important;
+        right: auto !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .timeline {
+        padding: 2px 0;
+    }
+    .timeline-content {
+        padding: 12px 8px;
+        border-radius: 14px;
+        box-shadow: 0 4px 18px rgba(0,0,0,0.18);
+    }
+}
 /* Experience Page Specific Styles */
 
 /* Timeline Styles */

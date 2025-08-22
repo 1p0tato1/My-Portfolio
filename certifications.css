@@ -1,3 +1,33 @@
+/* Responsive Design */
+@media (max-width: 900px) {
+    .education-grid {
+        gap: 15px;
+    }
+    .education-card {
+        flex-direction: column;
+        padding: 15px;
+    }
+    .education-icon {
+        font-size: 2rem;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .education-grid {
+        gap: 6px;
+        padding: 0 2px;
+    }
+    .education-card {
+        padding: 12px 8px;
+        border-radius: 14px;
+        box-shadow: 0 4px 18px rgba(0,0,0,0.18);
+    }
+    .education-icon {
+        font-size: 1.08rem;
+        margin-right: 4px;
+    }
+}
 /* Certifications Page Specific Styles */
 
 /* Education Section */

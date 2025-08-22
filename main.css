@@ -1,3 +1,58 @@
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .sidebar {
+        width: 220px;
+        padding: 20px 10px;
+    }
+    .main-content {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+    }
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 2px solid #2D2D2D;
+        box-shadow: none;
+        padding: 15px 5px;
+    }
+    .main-content {
+        margin-left: 0;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .sidebar {
+        padding: 18px 8px;
+        font-size: 1.08rem;
+        width: 100vw;
+        position: relative;
+        top: 0;
+        left: 0;
+        height: auto;
+        display: block;
+        align-items: stretch;
+        justify-content: flex-start;
+        z-index: 1001;
+        box-shadow: none;
+        border-radius: 0;
+    }
+    .main-content {
+        padding: 16px 6px 6px 6px;
+        margin-top: 70px;
+    }
+    .container {
+        flex-direction: column;
+        padding-top: 60px;
+    }
+}
 /* Reset and Base Styles */
 * {
     margin: 0;
@@ -561,6 +616,40 @@ img {
 :focus {
     outline: 2px solid var(--primary-color);
     outline-offset: 2px;
+}
+
+/* Mobile Welcome Card Consistency */
+@media (max-width: 600px) {
+    .profile {
+        margin-bottom: 32px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0 8px;
+    }
+    .profile-img {
+        width: 140px;
+        height: 140px;
+        margin: 0 auto 16px auto;
+        border-width: 3px;
+        box-shadow: 0 0 0 6px rgba(176,232,167,0.18), 0 8px 32px rgba(176,232,167,0.22);
+    }
+    .profile h1 {
+        font-size: 1.35rem;
+        margin-bottom: 6px;
+        text-align: center;
+        background: white;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    .profile .job-title {
+        font-size: 1rem;
+        margin-bottom: 12px;
+        text-align: center;
+    }
 }
 
 :focus:not(:focus-visible) {
