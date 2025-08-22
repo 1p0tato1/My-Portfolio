@@ -1,3 +1,8 @@
+/* Colorful SQL icon on hover */
+.skill-icon.skill-sql:hover i.fa-database {
+    color: #00758f;
+    transition: color 0.3s;
+}
 .card {
     box-shadow: none;
     backface-visibility: visible;
