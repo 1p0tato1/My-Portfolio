@@ -220,6 +220,18 @@
     margin-bottom: 5px;
 }
 
+.company a {
+    display: block;
+    color: #b0e8a7;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.company a:hover {
+    text-decoration: underline;
+}
+
 .duration {
     color: #ccc;
     font-size: 0.9rem;
