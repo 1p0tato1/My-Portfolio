@@ -1,0 +1,108 @@
+/* Language Switcher Styles */
+.language-switcher {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+    padding: 3px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.language-toggle {
+    display: flex;
+    background: transparent;
+    border-radius: 17px;
+    padding: 0;
+    position: relative;
+}
+
+.language-option {
+    padding: 8px 16px;
+    border: none;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 15px;
+    position: relative;
+    z-index: 2;
+    user-select: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.language-option:hover {
+    color: #fff;
+}
+
+.language-option.active {
+    color: #000;
+    font-weight: 600;
+}
+
+.language-slider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    background: linear-gradient(135deg, #b0e8a7, #8ac582);
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+.language-slider.french {
+    transform: translateX(100%);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .language-switcher {
+        top: 15px;
+        right: 15px;
+        padding: 2px;
+        border-radius: 18px;
+    }
+    
+    .language-toggle {
+        border-radius: 16px;
+    }
+    
+    .language-option {
+        padding: 6px 12px;
+        font-size: 0.75rem;
+        border-radius: 14px;
+    }
+    
+    .language-slider {
+        border-radius: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .language-switcher {
+        top: 10px;
+        right: 10px;
+        padding: 2px;
+        border-radius: 16px;
+    }
+    
+    .language-toggle {
+        border-radius: 14px;
+    }
+    
+    .language-option {
+        padding: 5px 10px;
+        font-size: 0.7rem;
+        border-radius: 12px;
+    }
+    
+    .language-slider {
+        border-radius: 12px;
+    }
+}
